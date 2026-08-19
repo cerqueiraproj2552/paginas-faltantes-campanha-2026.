@@ -1,0 +1,769 @@
+
+<body>
+
+<a class="pular" href="#quem">Pular para o conteúdo</a>
+
+<!-- =========================================================
+     CAMADA DE FUNDO CONTÍNUA
+     Uma só camada para o site inteiro. Ela dissolve de uma cena para a
+     outra enquanto o conteúdo troca por cima, e é isso que faz a seção
+     seguinte parecer continuação da anterior.
+     ========================================================= -->
+<div class="fundo" aria-hidden="true">
+  <div class="fundo__cena on" data-cena="abertura"></div>
+  <!-- Cena sem foto de propósito: no fecho da linha do tempo o azul da marca
+       fica sozinho para o número em lima ser a única coisa na tela. -->
+  <div class="fundo__cena" data-cena="numero"></div>
+  <div class="fundo__cena" data-cena="fe">
+    <picture>
+      <source media="(min-width:901px)" data-srcset="assets/img/fe-santuario-1600.webp">
+      <img data-src="assets/img/fe-santuario-900.webp" width="1067" height="1600" decoding="async" alt="">
+    </picture>
+  </div>
+  <div class="fundo__cena" data-cena="frase">
+    <picture>
+      <source media="(min-width:901px)" data-srcset="assets/img/assembleia2-1600.webp">
+      <img data-src="assets/img/assembleia2-900.webp" width="1600" height="1067" decoding="async" alt="">
+    </picture>
+  </div>
+  <div class="fundo__cena" data-cena="esferas">
+    <picture>
+      <source media="(min-width:901px)" data-srcset="assets/img/governador-1600.webp">
+      <img data-src="assets/img/governador-900.webp" width="1368" height="1368" decoding="async" alt="">
+    </picture>
+  </div>
+  <div class="fundo__cena" data-cena="bandeiras">
+    <picture>
+      <source media="(min-width:901px)" data-srcset="assets/img/escola-sala-1600.webp">
+      <img data-src="assets/img/escola-sala-900.webp" width="1600" height="1200" decoding="async" alt="">
+    </picture>
+  </div>
+</div>
+
+<!-- a cápsula da marca varre a diagonal na troca de seção -->
+<div class="varrida" aria-hidden="true"><i></i></div>
+
+<!-- Menu em largura cheia: o conteúdo encosta nas duas bordas de propósito,
+     para dar amplitude, em vez de ficar preso no container de 1180. -->
+<nav class="menu" id="menu" aria-label="Menu principal">
+  <a class="menu__marca" href="#topo" aria-label="Ricardinho 55550, início">
+    <img src="assets/img/logo-oficial.webp" width="900" height="366" alt="Ricardinho 55550, Deputado Estadual">
+  </a>
+  <button class="menu__botao" id="menuBotao" aria-expanded="false" aria-controls="menuLista">
+    <span></span><span></span><span></span>
+    <span class="menu__botao-txt">Menu</span>
+  </button>
+  <ul class="menu__lista" id="menuLista">
+    <li><a href="#quem">Quem é</a></li>
+    <li><a href="#caminhada">A caminhada</a></li>
+    <li><a href="#feito">O que já foi buscar</a></li>
+    <li><a href="#bandeiras">As bandeiras</a></li>
+    <li><a href="depoimentos.html">Depoimentos</a></li>
+    <li><a class="menu__cta" href="#" data-wa data-evento="menu">Entrar no grupo</a></li>
+  </ul>
+</nav>
+
+<main id="conteudo">
+<div class="palco">
+<div class="abertura-sequencia">
+
+<!-- ================= 1 · ABERTURA ================= -->
+<header class="tela hero" id="topo" data-cena="abertura">
+
+  <!-- Fundo tratado pelo Rafael: já vem com o azul, o desfoque e o clarão do
+       céu compostos. Por isso as camadas de véu, cunha e luz saíram daqui: em
+       cima deste arquivo elas só escureceriam duas vezes. -->
+  <div class="hero__cena" aria-hidden="true">
+    <picture>
+      <source media="(min-width:901px)" srcset="assets/img/fundo-alternativo-1920-v2.webp">
+      <img src="assets/img/fundo-alternativo-1100-v2.webp" width="1920" height="1080" fetchpriority="high" decoding="async" alt="">
+    </picture>
+  </div>
+
+  <!-- 55550 recortado da ARTE OFICIAL e não digitado:
+       o design system proíbe redesenhar nome e número. -->
+  <div class="hero__numero" aria-hidden="true">
+    <img src="assets/img/numero.webp" width="854" height="217" alt="" loading="lazy" decoding="async">
+  </div>
+
+  <div class="hero__luz" aria-hidden="true"></div>
+  <!-- este segundo brilho acompanha o cursor -->
+  <div class="hero__sol" aria-hidden="true"></div>
+
+  <div class="hero__particulas" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+
+
+  <!-- ⚠️ O corte é em 701px, o MESMO do layout, e não em 901px. O CSS troca
+       para o enquadramento de tablet em 701px, com o recorte alto na direita;
+       se a imagem só trocasse em 901px, toda a faixa de 701 a 900px (iPad em
+       retrato) esticaria o arquivo de 460×900 para quase 900px de altura. -->
+  <div class="hero__figura" id="heroFigura">
+    <picture>
+      <source media="(min-width:701px)" srcset="assets/img/figura-d-full.webp">
+      <img src="assets/img/figura-d-600.webp" width="743" height="955" fetchpriority="high" decoding="async"
+           alt="Ricardinho de camisa polo azul, com os punhos erguidos.">
+    </picture>
+  </div>
+
+  <div class="hero__base" aria-hidden="true"></div>
+
+  <img class="hero__selo" src="assets/img/selo-ficha-limpa.webp" width="400" height="162" alt="Candidato Ficha Limpa">
+
+  <div class="caixa hero__texto">
+   <div class="hero__bloco">
+    <p class="hero__olho"><span class="nome">Ricardo Alves Nascimento</span><span class="cargo">Candidato a Deputado Estadual pelo Paraná</span></p>
+
+    <h1 class="hero__titulo">
+      <span class="lin"><span>A nossa</span></span>
+      <span class="lin"><span><em class="destaque">caminhada</em></span></span>
+      <span class="lin"><span>já começou</span></span>
+    </h1>
+
+    <p class="hero__apoio">Vem fazer parte da mudança que o Paraná merece.</p>
+
+    <div class="hero__acao">
+      <a class="botao botao--lima" href="#" data-wa data-evento="hero">
+        <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.51c.12.17 1.71 2.61 4.15 3.66.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29"/></svg>
+        Quero fazer parte
+      </a>
+      <p class="hero__nota">Entre no grupo do WhatsApp para saber as formas de fazer parte.</p>
+    </div>
+   </div>
+  </div>
+
+  <p class="hero__rotulo">Imagem de fundo gerada por inteligência artificial.</p>
+
+  <a class="hero__desce" href="#quem">
+    <span>Conheça a história</span>
+    <span class="hero__desce-linha" aria-hidden="true"></span>
+  </a>
+
+</header>
+
+<!-- ================= 2 · QUEM É ================= -->
+<section class="tela quem" id="quem" aria-labelledby="quem-t">
+  <div class="quem__fixo">
+    <picture class="quem__foto" aria-hidden="true">
+      <source media="(max-width:700px)" srcset="assets/img/familia-6379-cinema-900-v1.webp">
+      <img src="assets/img/familia-6379-studio-2560-v2.webp" width="2559" height="1440" alt="" loading="lazy" decoding="async">
+    </picture>
+    <div class="quem__foto-veu" aria-hidden="true"></div>
+    <div class="quem__momento quem__momento--um caixa">
+      <p class="rotulo">Quem é o Ricardinho</p>
+      <h2 class="titulo" id="quem-t">Antes de tudo.<br><span>Gente que cuida de gente.</span></h2>
+      <p class="quem__familia">Um homem que ama a família</p>
+    </div>
+    <div class="quem__role" aria-hidden="true"><span></span><small>Role para baixo</small></div>
+  </div>
+</section>
+</div>
+
+<!-- ================= 3 · A FÉ ================= -->
+<!-- ⚠️ DESLIGADA no CSS (`.fe{display:none}`, no bloco da caminhada). O texto
+     fica aqui porque a caminhada abre com o mesmo assunto; para religar,
+     apagar aquela linha e conferir a ordem das cenas de fundo. -->
+<section class="tela fe" id="fe" data-cena="fe" aria-labelledby="fe-t">
+  <div class="tela__veu fe__veu"></div>
+  <div class="caixa">
+    <p class="rotulo" id="fe-t">A fé que me formou</p>
+    <p class="fe__frase">Liderar nada mais é do que <em>se colocar a serviço do próximo</em>.</p>
+    <p class="apoio">Foi na comunidade e na igreja que eu aprendi isso, muito antes de entrar na vida pública.</p>
+  </div>
+</section>
+
+<!-- ================= 4 · A CAMINHADA ================= -->
+<!-- Slides de tela cheia. A foto sangra e se dissolve no azul por um degradê,
+     em vez de ficar presa numa moldura. No computador ela ocupa a esquerda e o
+     texto a direita; no celular ela ocupa a tela e o texto entra na parte de baixo. -->
+<section class="cam" id="caminhada" aria-labelledby="cam-t">
+  <div class="cam__fixo">
+    <picture class="cam__fundo" aria-hidden="true">
+      <source media="(max-width:1100px)" srcset="assets/img/fundo-alternativo-1100-v2.webp">
+      <img src="assets/img/fundo-alternativo-1920-v2.webp" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+    </picture>
+    <div class="cam__numero-fixo" aria-hidden="true">55550</div>
+
+    <div class="cam__hud">
+      <div class="caixa">
+        <p class="rotulo" id="cam-t">A caminhada</p>
+        <div class="cam__atos">
+          <span class="cam__ato" data-ato="0">A fé</span>
+          <span class="cam__ato" data-ato="1">O serviço</span>
+          <span class="cam__ato" data-ato="2">O futuro</span>
+        </div>
+        <div class="cam__trilho"><div class="cam__preenche" id="camPreenche"></div></div>
+      </div>
+    </div>
+
+    <div class="cam__janela" id="camJanela" tabindex="0" role="region" aria-label="Linha do tempo. Use as setas para navegar.">
+      <ol class="cam__trilha" id="camTrilha">
+
+        <!-- ===== ATO 1 · A FÉ ===== -->
+        <li class="slide slide--cartela" data-ato="0">
+          <div class="slide__foto slide__foto--recorte">
+            <picture><source media="(max-width:700px)" srcset="assets/img/figura-d-600.webp"><img src="assets/img/figura-d-full.webp" width="1200" height="1600" loading="lazy" decoding="async" alt=""></picture>
+          </div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">1978</span>
+            <h3 class="slide__titulo">De onde eu venho</h3>
+            <p>Nasci em Curitiba, em abril de 1978.</p>
+            <p>Aprendi cedo, na igreja e na comunidade, que liderar é servir.</p>
+          </div>
+        </li>
+
+        <!-- ANO A DEFINIR: entrada na RCC -->
+        <li class="slide" data-ato="0">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/oracao-1600.webp">
+              <img src="assets/img/oracao-900.webp" width="1200" height="1600" loading="lazy" decoding="async"
+                   alt="Ricardinho de joelhos no banco da igreja, mãos unidas em oração.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">Ainda jovem</span>
+            <h3 class="slide__titulo">O chamado</h3>
+            <p>Entrei na Renovação Carismática Católica.</p>
+            <p>Ali eu descobri o que queria fazer da vida: cuidar de gente.</p>
+          </div>
+        </li>
+
+        <!-- ANO A DEFINIR: Ministério Jovem da RCC no Paraná -->
+        <li class="slide" data-ato="0">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/fe-bracos-1600.webp">
+              <img src="assets/img/fe-bracos-900.webp" width="1600" height="1067" loading="lazy" decoding="async"
+                   alt="Ricardinho de braços abertos, microfone na mão, falando a uma comunidade.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">No Paraná</span>
+            <h3 class="slide__titulo">Liderando os jovens</h3>
+            <p>Assumi o Ministério Jovem da RCC no Paraná.</p>
+            <p>Juntei jovens do estado inteiro em torno de um propósito.</p>
+          </div>
+        </li>
+
+        <!-- ANO A DEFINIR: início do Jesus no Litoral -->
+        <li class="slide" data-ato="0">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/assembleia-1600.webp">
+              <img src="assets/img/assembleia-900.webp" width="1067" height="1600" loading="lazy" decoding="async"
+                   alt="Assembleia de fiéis com as mãos erguidas durante um encontro de oração.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">No litoral</span>
+            <h3 class="slide__titulo">Jesus no Litoral</h3>
+            <p>Ajudei a colocar de pé o Jesus no Litoral.</p>
+            <p>Nasceu na praia do Paraná e hoje acontece no Brasil inteiro.</p>
+          </div>
+        </li>
+
+        <!-- ANO A DEFINIR: coordenação nacional do Ministério Jovem da RCC Brasil -->
+        <li class="slide" data-ato="0">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/fe-leitura-1600.webp">
+              <img src="assets/img/fe-leitura-900.webp" width="1600" height="1067" loading="lazy" decoding="async"
+                   alt="Ricardinho lendo em voz alta diante de uma assembleia, junto ao altar.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">No Brasil</span>
+            <h3 class="slide__titulo">Sentinelas da Manhã</h3>
+            <p>Fui coordenador nacional do Ministério Jovem da RCC.</p>
+            <p>Formei os Sentinelas da Manhã e vi muita vida mudar de rumo.</p>
+          </div>
+        </li>
+
+        <!-- ===== ATO 2 · O SERVIÇO ===== -->
+        <!-- ⚠️ FALTA FOTO DE TV. Não existe nenhuma no acervo. Esta é de estúdio. -->
+        <li class="slide" data-ato="1">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/apresentador-1600.webp">
+              <img src="assets/img/apresentador-900.webp" width="1600" height="1067" loading="lazy" decoding="async"
+                   alt="Ricardinho de camisa clara, com as mãos abertas, em pose de quem apresenta.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">Na TV</span>
+            <h3 class="slide__titulo">A notícia olho no olho</h3>
+            <p>Como jornalista e apresentador, entrei todos os dias na casa dos paranaenses.</p>
+            <p>Mais do que contar histórias, aprendi a ouvir quem faz a vida acontecer.</p>
+          </div>
+        </li>
+
+        <!-- ANO A DEFINIR: desde quando mora em Foz -->
+        <li class="slide" data-ato="1">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/ponte-1600.webp">
+              <img src="assets/img/ponte-900.webp" width="1200" height="1600" loading="lazy" decoding="async"
+                   alt="Ricardinho sorrindo num mirante, com a ponte e o rio de Foz do Iguaçu atrás.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">Em Foz</span>
+            <h3 class="slide__titulo">Foz virou minha casa</h3>
+            <p>Escolhi Foz do Iguaçu para viver.</p>
+            <p>Foi aqui que eu criei os meus dois filhos.</p>
+          </div>
+        </li>
+
+        <li class="slide" data-ato="1">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/rua-1600.webp">
+              <img src="assets/img/rua-900.webp" width="900" height="1600" loading="lazy" decoding="async"
+                   alt="Ricardinho conversando com moradores na rua, em Foz do Iguaçu.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">2024</span>
+            <h3 class="slide__titulo">O convite</h3>
+            <!-- GUARDRAIL: Silva e Luna é do PL, Ricardinho é do PSD. Partidos diferentes. -->
+            <p>Fui candidato a vice-prefeito na chapa do Silva e Luna.</p>
+            <p>Foz aprovou nas urnas.</p>
+          </div>
+        </li>
+
+        <li class="slide" data-ato="1">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/bandeiras-1600.webp">
+              <img src="assets/img/bandeiras-900.webp" width="1200" height="1600" loading="lazy" decoding="async"
+                   alt="Ricardinho de terno, em pé diante das bandeiras do Brasil e do Paraná.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">2025</span>
+            <h3 class="slide__titulo">Vice-prefeito</h3>
+            <p>Tomei posse em janeiro de 2025 e fiz da parceria com o governador Ratinho Junior uma ponte para Foz.</p>
+            <p>Essa articulação já ajudou a garantir um novo ônibus escolar e R$ 800 mil para melhorias em oito colégios estaduais.</p>
+            <p class="slide__proxima">Veja o que fiz como vice-prefeito na próxima seção</p>
+          </div>
+        </li>
+
+        <!-- ===== ATO 3 · O FUTURO ===== -->
+        <li class="slide slide--fim" data-ato="2">
+          <div class="slide__foto">
+            <picture>
+              <source media="(min-width:901px)" srcset="assets/img/retrato-1600.webp">
+              <img src="assets/img/retrato-900.webp" width="1200" height="1600" loading="lazy" decoding="async"
+                   alt="Ricardinho de terno, em pé, olhando para a frente.">
+            </picture>
+          </div>
+          <div class="slide__veu"></div>
+          <div class="slide__txt caixa">
+            <span class="slide__ano">2026</span>
+            <h3 class="slide__titulo">O chamado de agora</h3>
+            <p>Sou candidato a deputado estadual pelo Paraná.</p>
+            <p>Quero levar Foz para dentro da Assembleia.</p>
+            <a class="botao botao--lima botao--pequeno" href="#entrar" data-evento="fim-timeline">Vem comigo</a>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+
+    <p class="cam__dica" id="camDica" aria-hidden="true">
+      <span class="cam__dica-seta"></span> Continue rolando
+    </p>
+  </div>
+</section>
+
+<!-- ================= 5 · O NÚMERO ================= -->
+<!-- Fecho da linha do tempo. O número vivia dentro do "Quem é" e chegava cedo
+     demais, antes de a pessoa saber quem ele é. Aqui ele entra depois da
+     história inteira, quando pedir o voto já faz sentido.
+     A cena de fundo é a `numero`, que não tem foto: azul da marca sozinho. -->
+<section class="tela numero" id="numero" data-cena="numero" aria-labelledby="num-t">
+  <div class="caixa">
+    <p class="rotulo" id="num-t">Agora salva aí</p>
+    <p class="titulo numero__titulo">Guarde esse número<br class="quebra-desk">no seu coração.</p>
+    <!-- ⚠️ O 55550 aqui é digitado de propósito e é a ÚNICA exceção do site:
+         é contador animado, não assinatura de marca. Em toda peça onde o
+         número aparece como identidade ele sai da arte oficial (`numero.webp`),
+         como manda o DESIGN_SYSTEM. -->
+    <strong class="numero__digitos" aria-label="55550"><span aria-hidden="true">00000</span></strong>
+    <p class="numero__apoio">No dia <strong>4 de outubro</strong>, vote Ricardinho<br class="quebra-desk">para <em>Deputado <b>Estadual</b></em>.</p>
+  </div>
+</section>
+
+<!-- ================= 6 · A ARTE DO ENCONTRO ================= -->
+<section class="tela frase" id="frase" data-cena="frase">
+  <div class="tela__veu frase__veu"></div>
+  <div class="caixa">
+    <blockquote>
+      <p>Para mim, a política é, acima de tudo, <em>a arte do encontro</em>.</p>
+      <footer>Ricardinho</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= 7 · QUEM RESOLVE O QUÊ ================= -->
+<section class="tela esferas" id="esferas" data-cena="esferas" aria-labelledby="esf-t">
+  <div class="tela__veu esferas__veu"></div>
+  <div class="caixa">
+    <p class="rotulo">Quem resolve o quê</p>
+    <h2 class="titulo" id="esf-t">Cada problema tem um dono certo.</h2>
+
+    <div class="esferas__grade">
+      <article class="esfera">
+        <h3>A Prefeitura cuida de</h3>
+        <ul>
+          <li>Buraco na rua</li>
+          <li>Posto de saúde do bairro</li>
+          <li>Creche e coleta de lixo</li>
+          <li>Praça e iluminação</li>
+        </ul>
+      </article>
+
+      <article class="esfera esfera--foco">
+        <h3>O Governo do Estado cuida de</h3>
+        <ul>
+          <li>Hospital regional</li>
+          <li>Colégio estadual</li>
+          <li>Polícia Militar e Civil</li>
+          <li>Rodovia do estado</li>
+          <li>Universidade estadual</li>
+        </ul>
+        <p class="esfera__marca">É aqui que eu quero trabalhar</p>
+      </article>
+
+      <article class="esfera">
+        <h3>O Governo Federal cuida de</h3>
+        <ul>
+          <li>Ponte internacional</li>
+          <li>Rodovia federal</li>
+          <li>Parque Nacional</li>
+          <li>Itaipu</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="esferas__fecho">
+      Como vice-prefeito, meu trabalho é bater na porta do estado para trazer o que Foz precisa.
+      <strong>Como deputado estadual, eu estaria do outro lado dessa porta.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ================= 8 · AS BANDEIRAS ================= -->
+<section class="tela bandeiras" id="bandeiras" data-cena="bandeiras" aria-labelledby="band-t">
+  <div class="tela__veu bandeiras__veu"></div>
+  <div class="caixa">
+    <p class="rotulo">O que eu vou fazer</p>
+    <h2 class="titulo" id="band-t">Quatro bandeiras que dependem do estado.</h2>
+
+    <div class="bandeiras__grade">
+      <article class="band">
+        <h3><span aria-hidden="true">01</span> Saúde</h3>
+        <p>Fila de cirurgia e de exame parada, e falta de médico especialista.</p>
+        <p class="band__faz">Brigar pelo Hospital Regional funcionando, com equipe e dinheiro para manter as portas abertas.</p>
+      </article>
+      <article class="band">
+        <h3><span aria-hidden="true">02</span> Segurança</h3>
+        <p>Furto no bairro, e o tráfico e o contrabando na fronteira.</p>
+        <p class="band__faz">Mais policial na rua, viatura e delegacia, porque a Polícia Militar e a Civil são do estado.</p>
+      </article>
+      <article class="band">
+        <h3><span aria-hidden="true">03</span> Educação</h3>
+        <p>Turma de ensino médio da noite sendo fechada, bem onde estuda quem trabalha de dia.</p>
+        <p class="band__faz">Manter a turma da noite aberta e trazer o curso de Medicina para a Unioeste.</p>
+      </article>
+      <article class="band">
+        <h3><span aria-hidden="true">04</span> Infraestrutura</h3>
+        <p>Estrada ruim e acesso travado em toda a região Oeste.</p>
+        <p class="band__faz">Terceira faixa nas rodovias do estado, para acabar com a fila atrás do caminhão.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</div><!-- /palco -->
+
+<!-- =========================================================
+     ZONA LIVRE · rola normalmente, porque não cabe numa tela
+     ========================================================= -->
+<div class="livre">
+
+<!-- ================= O QUE EU JÁ FUI BUSCAR =================
+     Conteúdo de ../FLYER_VERSO_SAUDE.md, fechado em 16/08/2026 a partir da
+     conversa com o Fábio, interlocutor técnico da Saúde.
+
+     REGRA DOS TÍTULOS: o título CARREGA O FATO, com número, nome ou lugar.
+     Nunca rótulo de assunto ("Cirurgia de quadril") e nunca promessa solta
+     ("A espera acabou"). A curiosidade vem da especificidade, nunca do mistério.
+
+     ⚠️ A palavra "primeira" na fila do quadril é OBRIGATÓRIA. O Fábio separou a
+        primeira cirurgia de revisão e troca de prótese. Sem o qualificador, um
+        único caso de revisão derruba a frase.
+     ⚠️ LASTRO PENDENTE na pasta da campanha, para responder quando cobrarem:
+        Porto Meira 24 h · carros e ambulâncias · postos no planejamento estadual ·
+        Hospital Regional · Policlínica do Morumbi.
+     ⚠️ FICARAM DE FORA de propósito: os R$ 7 milhões do Hospital Municipal (sem
+        documento), cirurgia de coluna (licitação em preparação) e o AME (em projeto).
+     ================================================================= -->
+<section class="feito" id="feito">
+  <div class="caixa">
+    <p class="rotulo rotulo--escuro">O que eu já fui buscar</p>
+    <h2 class="titulo titulo--escuro">Vice-prefeito é quem<br>bate na porta do estado.</h2>
+    <p class="feito__apoio">Isto é o que já passou por essa porta, na saúde de Foz do Iguaçu.</p>
+
+    <p class="divisor divisor--pronto">Já está funcionando</p>
+    <div class="fatos">
+      <article class="fato">
+        <h3>Fila do quadril: zerada</h3>
+        <p>Quem esperava a <strong>primeira</strong> cirurgia de quadril já operou.</p>
+      </article>
+      <article class="fato">
+        <h3>Catarata operada em 30 dias</h3>
+        <p>É o prazo do primeiro olho, da fila até a cirurgia.</p>
+      </article>
+      <article class="fato">
+        <h3>Hérnia e vesícula em 30 dias</h3>
+        <p>É o prazo para o paciente ser chamado na cirurgia geral.</p>
+      </article>
+      <article class="fato">
+        <h3>Cirurgia de retina agora em Foz</h3>
+        <p>Antes o paciente tinha que ir até Cascavel para operar.</p>
+      </article>
+      <article class="fato">
+        <h3>Urgência de ortopedia no CIS</h3>
+        <p>Atende quem chega pela UPA ou pelo Hospital Municipal.</p>
+      </article>
+      <article class="fato">
+        <h3>Ressonância e tomografia no CIS</h3>
+        <p>Também ultrassom e raio-X, para Foz e para a região.</p>
+      </article>
+      <article class="fato">
+        <h3>Mais especialistas na cidade</h3>
+        <p>Pediatra, ginecologista, neurologista e outras áreas atendendo em Foz.</p>
+      </article>
+      <article class="fato">
+        <h3>Autismo avaliado no posto</h3>
+        <p>O projeto PIPA faz a primeira avaliação da criança na unidade do bairro.</p>
+      </article>
+      <article class="fato">
+        <h3>Receita renovada à distância</h3>
+        <p>Sem precisar ir até o posto de saúde só para pegar o papel.</p>
+      </article>
+      <article class="fato">
+        <h3>Quase 2 mil dentes implantados</h3>
+        <p>Serviço de saúde bucal. A conta é por dente.</p>
+      </article>
+    </div>
+
+    <p class="divisor divisor--obra">O que ele buscou e está a caminho</p>
+    <div class="fatos">
+      <article class="fato">
+        <h3>Policlínica do Morumbi em obra</h3>
+        <p>Vai ter médico especialista e exame perto de casa.</p>
+      </article>
+      <article class="fato">
+        <h3>Porto Meira vai ter 24 horas</h3>
+        <p>Fui buscar no Estado a estrutura e os aparelhos do pronto atendimento.</p>
+      </article>
+      <article class="fato">
+        <h3>Carros e ambulâncias do Estado</h3>
+        <p>Trouxe para Foz. Dois postos de saúde em obra e mais quatro a caminho.</p>
+      </article>
+      <article class="fato">
+        <h3>Hospital Regional em projeto</h3>
+        <p>O Estado vai pagar, para atender Foz e todo o Oeste.</p>
+      </article>
+    </div>
+
+    <p class="feito__fecho">Como vice-prefeito, eu já fui buscar.<br>
+      <strong>Como deputado estadual, vou buscar muito mais.</strong></p>
+
+    <!-- Camada 2: as entregas da gestão, como trabalho de equipe e recolhidas.
+         Elas continuam disponíveis, mas param de soar balanço de prefeitura. -->
+    <details class="gestao">
+      <summary>E o que a nossa gestão entregou junto, em 40 obras</summary>
+      <p class="gestao__nota">Estou na vice-prefeitura desde janeiro de 2025. Estas são as entregas da gestão da qual eu faço parte, com a etiqueta de quem executou cada uma.</p>
+      <div class="feito__grade">
+        <article class="bloco">
+          <h3 class="bloco__nome">Saúde</h3>
+          <ul class="bloco__lista">
+            <li>Hospital Regional de Foz <span class="tag tag--estado">Governo do Estado</span></li>
+            <li>CIS Poliambulatório</li>
+            <li>Máquina de ressonância do CIS</li>
+            <li>Mutirão de cirurgia de catarata</li>
+          </ul>
+          <details class="bloco__mais"><summary>Ver os outros 5</summary>
+            <ul class="bloco__lista">
+              <li>Oftalmologia no CIS</li><li>UBS Bubas</li><li>Nova UBS Parque Presidente</li>
+              <li>Policlínica Morumbi</li><li>Reforma da UBS Vila Adriana</li>
+            </ul>
+          </details>
+        </article>
+  
+        <article class="bloco">
+          <h3 class="bloco__nome">Mobilidade</h3>
+          <ul class="bloco__lista">
+            <li>Trincheira do Jupira</li>
+            <li>Trevo da Charrua</li>
+            <li>Recapeamento da Mário Filho</li>
+            <li>Ponte da Integração <span class="tag tag--federal">Governo Federal</span></li>
+          </ul>
+          <details class="bloco__mais"><summary>Ver os outros 4</summary>
+            <ul class="bloco__lista">
+              <li>Melhorias na rua Medianeira</li>
+              <li>Duplicação da Rodovia das Cataratas <span class="tag tag--federal">Governo Federal</span></li>
+              <li>Perimetral Leste</li><li>Porto Seco</li>
+            </ul>
+          </details>
+        </article>
+  
+        <article class="bloco">
+          <h3 class="bloco__nome">Esporte e lazer</h3>
+          <ul class="bloco__lista">
+            <li>Reforma do ginásio Costa Cavalcante</li>
+            <li>Ginásio Cidade Nova</li>
+            <li>Meu Campinho no São Roque e no Alvorada</li>
+            <li>Revitalização da Avenida JK</li>
+          </ul>
+          <details class="bloco__mais"><summary>Ver os outros 2</summary>
+            <ul class="bloco__lista"><li>Revitalização do campo do Libra</li><li>Pista de pump track</li></ul>
+          </details>
+        </article>
+  
+        <article class="bloco">
+          <h3 class="bloco__nome">Novas obras</h3>
+          <ul class="bloco__lista">
+            <li>Reurbanização do Bubas</li><li>Beira Foz</li><li>CEU da Cultura no Bubas</li>
+            <li>Parque Remador</li><li>Espaço para a Fartal</li>
+          </ul>
+        </article>
+  
+        <article class="bloco">
+          <h3 class="bloco__nome">Educação</h3>
+          <!-- ⚠️ CONFIRMAR se estas escolas são municipais ou estaduais. -->
+          <ul class="bloco__lista">
+            <li>Escola Cândido Portinari</li><li>Escola Acácio Pedroso</li>
+            <li>Escola Lúcia Marlene</li><li>Merenda escolar de mais qualidade</li>
+          </ul>
+        </article>
+  
+        <article class="bloco">
+          <h3 class="bloco__nome">Com a iniciativa privada</h3>
+          <ul class="bloco__lista">
+            <li>Iluminação em LED por parceria público-privada</li>
+            <li>Aquário</li><li>Espaço das Américas</li><li>Espaço Pompidou</li>
+          </ul>
+          <details class="bloco__mais"><summary>Ver os outros 3</summary>
+            <ul class="bloco__lista">
+              <li>Revitalização do Parque Nacional do Iguaçu <span class="tag tag--federal">Governo Federal</span></li>
+              <li>Mais leitos de hotel na cidade</li><li>Turismo em alta</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+  
+      <p class="feito__vem"><strong>Ainda vem por aí:</strong> Feira do Livro e o Natal de Foz.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ================= VEM FAZER PARTE ================= -->
+<section class="entrar" id="entrar">
+  <div class="caixa">
+    <p class="rotulo rotulo--escuro">Vem fazer parte</p>
+    <h2 class="titulo titulo--escuro">A caminhada é nossa.<br>Escolha por onde começar.</h2>
+
+    <div class="entrar__grade">
+      <article class="porta porta--zap">
+        <h3>Entrar no grupo</h3>
+        <p>No grupo do WhatsApp você vê todas as formas de fazer parte.</p>
+        <a class="botao botao--lima" href="#" data-wa data-evento="bloco">
+          <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.51c.12.17 1.71 2.61 4.15 3.66.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29"/></svg>
+          Entrar no grupo
+        </a>
+      </article>
+
+      <article class="porta porta--form">
+        <h3>Deixar o seu contato</h3>
+        <p>Preencha e a nossa equipe fala com você.</p>
+        <form id="formApoio" novalidate>
+          <label for="fNome">Seu nome</label>
+          <input id="fNome" name="nome" type="text" autocomplete="name" required placeholder="Como podemos te chamar">
+          <label for="fBairro">Seu bairro</label>
+          <input id="fBairro" name="bairro" type="text" required placeholder="Onde você mora">
+          <label for="fZap">Seu WhatsApp</label>
+          <input id="fZap" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel" required placeholder="(45) 90000-0000">
+          <label class="aceite">
+            <input type="checkbox" name="aceite" required>
+            <span>Autorizo a campanha a falar comigo pelo WhatsApp. <a href="privacidade.html">Como usamos os seus dados</a>.</span>
+          </label>
+          <button class="botao botao--lima" type="submit">Quero ajudar</button>
+          <p class="form__aviso" id="formAviso" role="status" aria-live="polite"></p>
+        </form>
+      </article>
+
+      <article class="porta porta--redes">
+        <h3>Acompanhar por perto</h3>
+        <p>O dia a dia da caminhada está no Instagram.</p>
+        <a class="botao botao--linha" href="https://instagram.com/ricardinho.foz" target="_blank" rel="noopener" data-evento="instagram">Seguir no Instagram</a>
+        <button class="botao botao--linha" type="button" id="btCompartilhar" data-evento="compartilhar">Mandar para um amigo</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+</div><!-- /livre -->
+</main>
+
+<!-- ================= RODAPÉ ================= -->
+<footer class="rodape">
+  <div class="caixa">
+    <img class="rodape__marca" src="assets/img/logo-oficial.webp" width="900" height="366" alt="Ricardinho 55550, Deputado Estadual" loading="lazy">
+    <p class="rodape__frase">Quem tem propósito não foge do chamado.</p>
+
+    <nav class="rodape__nav" aria-label="Seções do site">
+      <a href="#quem">Quem é</a>
+      <a href="#caminhada">A caminhada</a>
+      <a href="#feito">O que eu fui buscar</a>
+      <a href="#bandeiras">As bandeiras</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a href="privacidade.html">Privacidade</a>
+    </nav>
+
+    <!-- Identificação obrigatória. Lei 9.504/97 e Res.-TSE 23.610/2019. -->
+    <div class="rodape__legal">
+      <p>Propaganda eleitoral gratuita.</p>
+      <p>ELEIÇÃO 2026 RICARDO ALVES NASCIMENTO DEPUTADO ESTADUAL</p>
+      <p>CNPJ 68.518.734/0001-09</p>
+      <p>Endereço eletrônico comunicado à Justiça Eleitoral. Hospedagem em provedor estabelecido no Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- atalho fixo, visível em qualquer seção -->
+<div class="atalho" id="atalho">
+  <a class="botao botao--lima" href="#" data-wa data-evento="atalho">
+    <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.51c.12.17 1.71 2.61 4.15 3.66.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29"/></svg>
+    Entrar no grupo
+  </a>
+</div>
+
+<script src="script.js?v=62"></script>
+</body>
+</html>
