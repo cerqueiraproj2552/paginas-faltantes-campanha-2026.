@@ -1,0 +1,347 @@
+/* PROPOSTAS · complemento do estilo.css */
+
+.propostas-hero{
+  position:relative;
+  overflow:hidden;
+  background:var(--azul-fundo);
+  padding:8rem 0 5rem;
+}
+
+.propostas-hero__veu{
+  background:linear-gradient(
+    to bottom,
+    rgba(12,26,54,.96),
+    rgba(14,30,62,.70) 45%,
+    rgba(22,60,120,0) 82%
+  );
+}
+
+.propostas-hero__numero{
+  position:absolute;
+  z-index:1;
+  right:clamp(-2rem,2vw,1rem);
+  bottom:-5%;
+  width:min(50vw,460px);
+  opacity:.12;
+  pointer-events:none;
+}
+
+.propostas-hero__numero img{
+  width:100%;
+  height:auto;
+}
+
+.propostas-hero__titulo{
+  max-width:22ch;
+}
+
+.propostas-hero__apoio{
+  color:rgba(255,255,255,.88);
+  font-size:1.08rem;
+  max-width:58ch;
+  margin:0;
+}
+
+.propostas-zona{
+  background:var(--azul-fundo);
+  padding:1rem 0 5rem;
+}
+
+.propostas-intro{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(280px,500px);
+  gap:2rem;
+  align-items:end;
+  margin-bottom:2rem;
+}
+
+.propostas-intro__rotulo{
+  color:var(--lima);
+  font-family:var(--display);
+  font-weight:800;
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin:0 0 .45rem;
+}
+
+.propostas-intro h2,
+.propostas-lista h2{
+  color:var(--branco);
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(1.8rem,3.5vw,2.6rem);
+  line-height:1.05;
+  margin:0;
+}
+
+.propostas-intro>p{
+  color:rgba(255,255,255,.68);
+  line-height:1.7;
+  margin:0;
+}
+
+/* Destaque */
+
+.proposta-destaque{
+  min-height:450px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  overflow:hidden;
+  border-radius:var(--raio);
+  background:#0B1830;
+  box-shadow:var(--sombra);
+  margin-bottom:4rem;
+}
+
+.proposta-destaque__imagem{
+  min-height:450px;
+  overflow:hidden;
+}
+
+.proposta-destaque__imagem img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+.proposta-destaque:hover .proposta-destaque__imagem img{
+  transform:scale(1.04);
+}
+
+.proposta-destaque__conteudo{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:clamp(1.8rem,4vw,3.5rem);
+}
+
+.proposta__categoria{
+  display:inline-flex;
+  align-items:center;
+  color:var(--azul-fundo);
+  background:var(--dourado);
+  border-radius:999px;
+  padding:.35rem .7rem;
+  font-family:var(--display);
+  font-weight:800;
+  font-size:.68rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+}
+
+.proposta-destaque__conteudo h2{
+  color:var(--branco);
+  font-family:var(--display);
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.04;
+  margin:0 0 1rem;
+}
+
+.proposta-destaque__conteudo>p{
+  color:rgba(255,255,255,.76);
+  line-height:1.7;
+  margin:0 0 1.5rem;
+}
+
+/* Cards */
+
+.propostas-lista__cabecalho{
+  margin-bottom:1.3rem;
+}
+
+.propostas-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1.2rem;
+}
+
+.proposta-card{
+  position:relative;
+  overflow:hidden;
+  min-height:330px;
+  padding:1.5rem;
+  border-radius:16px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 10px 28px rgba(4,14,32,.25);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.proposta-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 22px 45px rgba(4,14,32,.42);
+  border-color:rgba(255,255,255,.17);
+}
+
+.proposta-card__numero{
+  position:absolute;
+  top:-.8rem;
+  right:.8rem;
+  color:rgba(255,255,255,.035);
+  font-family:var(--display);
+  font-weight:800;
+  font-size:7rem;
+  line-height:1;
+  pointer-events:none;
+}
+
+.proposta-card__icone{
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+  font-size:1.5rem;
+  margin-bottom:1.2rem;
+}
+
+.proposta-card .proposta__categoria{
+  background:var(--lima);
+  margin-bottom:.8rem;
+}
+
+.proposta-card h3{
+  position:relative;
+  color:var(--branco);
+  font-family:var(--display);
+  font-weight:800;
+  font-size:1.35rem;
+  line-height:1.12;
+  margin:0 0 .7rem;
+}
+
+.proposta-card p{
+  position:relative;
+  color:rgba(255,255,255,.68);
+  line-height:1.6;
+  font-size:.92rem;
+  margin:0 0 1.3rem;
+}
+
+.proposta-card__rodape{
+  position:absolute;
+  left:1.5rem;
+  right:1.5rem;
+  bottom:1.3rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:.8rem;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+
+.proposta-card__rodape span{
+  color:rgba(255,255,255,.45);
+  font-size:.72rem;
+}
+
+.proposta-card__rodape strong{
+  color:var(--lima);
+  font-size:.78rem;
+}
+
+/* Área de edição */
+
+.como-editar-propostas{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+  margin-top:4rem;
+  padding:1.4rem 1.6rem;
+  border-radius:14px;
+  background:rgba(255,255,255,.045);
+  border:1px dashed rgba(255,255,255,.18);
+}
+
+.como-editar-propostas__icone{
+  flex:0 0 48px;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--lima);
+  color:var(--azul-fundo);
+  font-size:1.4rem;
+}
+
+.como-editar-propostas h2{
+  color:var(--branco);
+  font-family:var(--display);
+  font-size:1.15rem;
+  margin:0 0 .35rem;
+}
+
+.como-editar-propostas p{
+  color:rgba(255,255,255,.62);
+  font-size:.85rem;
+  line-height:1.6;
+  margin:0;
+}
+
+/* Responsivo */
+
+@media(max-width:950px){
+  .propostas-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:800px){
+  .propostas-intro{
+    grid-template-columns:1fr;
+    gap:.8rem;
+  }
+
+  .proposta-destaque{
+    grid-template-columns:1fr;
+  }
+
+  .proposta-destaque__imagem{
+    min-height:300px;
+  }
+
+  .proposta-destaque__conteudo{
+    padding:1.7rem;
+  }
+}
+
+@media(max-width:600px){
+  .propostas-hero{
+    padding:7rem 0 4rem;
+  }
+
+  .propostas-hero__numero{
+    width:65vw;
+    right:-2rem;
+    bottom:0;
+  }
+
+  .propostas-grid{
+    grid-template-columns:1fr;
+  }
+
+  .proposta-destaque__imagem{
+    min-height:230px;
+  }
+
+  .proposta-destaque__conteudo h2{
+    font-size:1.8rem;
+  }
+
+  .como-editar-propostas{
+    align-items:flex-start;
+    padding:1.2rem;
+  }
+}
